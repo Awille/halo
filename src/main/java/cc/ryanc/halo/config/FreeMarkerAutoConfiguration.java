@@ -1,5 +1,6 @@
 package cc.ryanc.halo.config;
 
+import cc.ryanc.halo.logging.Logger;
 import cc.ryanc.halo.model.freemarker.method.RandomMethod;
 import cc.ryanc.halo.model.freemarker.method.RecentCommentsMethod;
 import cc.ryanc.halo.model.freemarker.method.RecentPostsMethod;
@@ -49,6 +50,7 @@ public class FreeMarkerAutoConfiguration {
 
     @Autowired
     private RecentCommentsMethod recentCommentsMethod;
+    private Logger log = Logger.getLogger(FreeMarkerAutoConfiguration.class);
 
     @PostConstruct
     public void setSharedVariable() {

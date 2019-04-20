@@ -1,5 +1,6 @@
 package cc.ryanc.halo.listener;
 
+import cc.ryanc.halo.logging.Logger;
 import cc.ryanc.halo.model.dto.Theme;
 import cc.ryanc.halo.model.enums.BlogPropertiesEnum;
 import cc.ryanc.halo.service.OptionsService;
@@ -37,6 +38,7 @@ public class StartedListener implements ApplicationListener<ApplicationStartedEv
 
     @Autowired
     private freemarker.template.Configuration configuration;
+    private Logger log = Logger.getLogger(StartedListener.class);
 
     @Override
     public void onApplicationEvent(ApplicationStartedEvent event) {
